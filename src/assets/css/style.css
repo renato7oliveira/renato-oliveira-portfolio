@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  transition: 0.3s;
+}
+
+html,
+body {
+  background-color: #f8f9fa;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+}
+
+p,
+li {
+  font-size: 1.2rem;
+}
+
+.about {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100vh;
+}
+.about article {
+  align-content: center;
+  display: grid;
+  height: 100vh;
+  padding: 0 50px;
+}
+
+figure {
+  position: relative;
+  text-align: center;
+}
+figure img {
+  border-radius: 500px;
+  box-shadow: 0 0 55px rgba(153, 153, 153, 0.9);
+  width: 200px;
+}
+
+.description {
+  background: #071a56;
+  background: linear-gradient(40deg, #071a56 60%, #77027e 100%);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.description div {
+  z-index: 1;
+}
+.description h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+.description p {
+  line-height: 35px;
+  margin-top: 15px;
+}
+.description a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.description a:hover {
+  color: #fff;
+}
+.description i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.description::after {
+  animation: animate-cloud 77s ease-in-out infinite alternate;
+  background-image: url(../images/cloud-bg.png);
+  background-repeat: no-repeat;
+  content: "";
+  height: 785px;
+  position: absolute;
+  width: 1392px;
+}
+
+@keyframes animate-cloud {
+  to {
+    transform: translateX(-696px);
+  }
+}
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .about article {
+    padding: 0 25px;
+  }
+
+  .description h1 {
+    font-size: 1.5rem;
+  }
+}
+.links {
+  background-color: rgba(240, 240, 240, 0.5);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  height: 100vh;
+  padding: 50px;
+}
+.links article {
+  background-color: #fff;
+  box-shadow: 20px 20px 60px #e4e5e5, -20px -20px 60px #ffffff;
+  border-radius: 3px;
+  padding: 25px;
+}
+.links article h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.links article li {
+  margin-top: 15px;
+}
+.links article li a, .links article li summary {
+  color: royalblue;
+  cursor: pointer;
+  text-decoration: none;
+}
+.links article li a:hover, .links article li summary:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .links {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
