@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css");
 * {
   box-sizing: border-box;
@@ -10,9 +11,14 @@
   transition: 0.3s;
 }
 
+:root {
+  --color-brown: #47363f;
+  --color-white: #f9f7f8;
+}
+
 html,
 body {
-  background-color: #f8f9fa;
+  background-color: var(--color-white);
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
 }
 
@@ -21,8 +27,44 @@ li {
   font-size: 1.2rem;
 }
 
+header {
+  align-content: center;
+  background-attachment: fixed;
+  background-image: url("../images/header-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  height: 100vh;
+  left: 0;
+  padding-left: 20px;
+  text-align: left;
+  top: 0;
+  width: 100%;
+}
+header h1,
+header h2 {
+  color: var(--color-brown);
+  font-family: "Poiret One", cursive;
+  font-weight: 300;
+  margin: 0;
+  z-index: 3;
+}
+header h1 {
+  font-size: 5vw;
+}
+header h2 {
+  font-size: 3vw;
+}
+
+@media (max-width: 900px) {
+  header {
+    display: none;
+  }
+}
 .about {
   align-items: center;
+  background-color: var(--color-white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
@@ -40,14 +82,24 @@ figure {
 }
 figure img {
   border-radius: 500px;
-  box-shadow: 0 0 55px rgba(153, 153, 153, 0.9);
   width: 200px;
 }
 
+figure::after {
+  content: "";
+  width: 150px;
+  height: 10px;
+  display: block;
+  margin: 25px auto;
+  background-color: var(--color-white);
+  background-color: rgba(204, 204, 204, 0.4);
+  border-radius: 100%;
+  box-shadow: 0 0 10px 15px rgba(204, 204, 204, 0.4);
+}
+
 .description {
-  background: #071a56;
-  background: linear-gradient(40deg, #071a56 60%, #77027e 100%);
-  color: #fff;
+  background: var(--color-brown);
+  color: var(--color-white);
   overflow: hidden;
   position: relative;
 }
@@ -76,21 +128,6 @@ figure img {
   margin-right: 10px;
 }
 
-.description::after {
-  animation: animate-cloud 77s ease-in-out infinite alternate;
-  background-image: url(../images/cloud-bg.png);
-  background-repeat: no-repeat;
-  content: "";
-  height: 785px;
-  position: absolute;
-  width: 1392px;
-}
-
-@keyframes animate-cloud {
-  to {
-    transform: translateX(-696px);
-  }
-}
 @media (max-width: 900px) {
   .about {
     grid-template-columns: 1fr;
@@ -101,46 +138,48 @@ figure img {
   }
 
   .description h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
-.links {
-  background-color: rgba(240, 240, 240, 0.5);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px;
-  height: 100vh;
-  padding: 50px;
+footer {
+  bottom: 15px;
+  display: flex;
+  gap: 15px;
+  position: fixed;
+  right: 25px;
 }
-.links article {
-  background-color: #fff;
-  box-shadow: 20px 20px 60px #e4e5e5, -20px -20px 60px #ffffff;
-  border-radius: 3px;
-  padding: 25px;
-}
-.links article h2 {
+footer a {
+  color: var(--color-white);
   font-size: 2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-.links article li {
-  margin-top: 15px;
-}
-.links article li a, .links article li summary {
-  color: royalblue;
-  cursor: pointer;
+  opacity: 0.9;
   text-decoration: none;
 }
-.links article li a:hover, .links article li summary:hover {
-  text-decoration: underline;
+footer a:hover {
+  transform: scale(1.2);
+}
+footer a:active {
+  transform: scale(1);
 }
 
 @media (max-width: 900px) {
-  .links {
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    min-height: 100vh;
-    padding: 20px;
+  footer {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    bottom: 0;
+    height: 50px;
+    justify-content: space-around;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  footer a {
+    color: var(--color-white);
+    font-size: 1.7rem;
+    opacity: 1;
+  }
+  footer a:hover {
+    color: var(--color-white);
+    transform: scale(1);
   }
 }
 
