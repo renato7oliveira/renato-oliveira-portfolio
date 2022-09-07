@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
 * {
   box-sizing: border-box;
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
@@ -12,7 +12,7 @@
 }
 
 :root {
-  --color-brown: #47363f;
+  --color-primary: #3b2928;
   --color-white: #f9f7f8;
 }
 
@@ -44,7 +44,7 @@ header {
 }
 header h1,
 header h2 {
-  color: var(--color-brown);
+  color: var(--color-primary);
   font-family: "Poiret One", cursive;
   font-weight: 300;
   margin: 0;
@@ -98,13 +98,10 @@ figure::after {
 }
 
 .description {
-  background: var(--color-brown);
+  background: var(--color-primary);
   color: var(--color-white);
   overflow: hidden;
   position: relative;
-}
-.description div {
-  z-index: 1;
 }
 .description h1 {
   font-size: 2.5rem;
@@ -118,7 +115,7 @@ figure::after {
 .description a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.9rem;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .description a:hover {
   color: #fff;
@@ -141,6 +138,69 @@ figure::after {
     font-size: 2rem;
   }
 }
+.modal {
+  display: grid;
+  align-content: center;
+  background-color: var(--color-primary);
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.modal p {
+  color: var(--color-white);
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+.modal i {
+  color: rgba(255, 255, 255, 0.5) !important;
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+.modal i:hover {
+  color: #fff !important;
+}
+
+.modal-info-copy {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-size: 0.9rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+.modal p:nth-child(3) {
+  color: rgba(255, 255, 255, 0.5) !important;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.modal p:nth-child(3):hover {
+  color: #fff !important;
+}
+
+.modal-visible {
+  display: grid;
+}
+
+.modal-info-copy-show {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+@media (max-width: 900px) {
+  .modal p {
+    font-size: 0.8rem;
+    margin: 5px 0;
+  }
+}
 footer {
   bottom: 15px;
   display: flex;
@@ -150,6 +210,7 @@ footer {
 }
 footer a {
   color: var(--color-white);
+  cursor: pointer;
   font-size: 2rem;
   opacity: 0.9;
   text-decoration: none;
@@ -166,7 +227,7 @@ footer a:active {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.9);
     bottom: 0;
-    height: 50px;
+    height: 75px;
     justify-content: space-around;
     left: 0;
     right: 0;

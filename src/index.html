@@ -8,7 +8,7 @@
 <meta property="og:type" content="website" />
 <meta name="description" content="Renato Oliveira · front-end · web-design" />
 <meta property="og:description" content="Renato Oliveira · front-end · web-design" />
-<meta property="og:image" content="https://www.renatooliveiraweb.com/assets/images/renato-oliveira-web.jpg" />
+<meta property="og:image" content="https://www.renatooliveiraweb.com/assets/images/renato-oliveira-web-about.jpg" />
 <meta property="og:site_name" content="Renato Oliveira · front-end · web-design">
 <meta property="og:title" content="Renato Oliveira · front-end · web-design" />
 <meta property="og:url" content="https://www.renatooliveiraweb.com">
@@ -36,38 +36,17 @@
             </div>
         </article>
     </section>
+    <section class="modal">
+        <p class="modal-info-copy">E-mail copiado!</p>
+        <p><span class="email-content">renato.ldeoliveira@gmail.com</span> <i class="fa-regular fa-copy" onclick="copyEmail()"></i></p>
+        <p onclick="modal()">(X) Fechar </p>
+    </section>
     <footer>
         <a href="https://www.linkedin.com/in/renatooliveiraweb" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/renato7oliveira" target="_blank" title="Github"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/renatooliveiraweb" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:renato.ldeoliveira@gmail.com" target="_blank" title="G-mail"><i class="fab fa-google"></i></a>
+        <a title="G-mail" onclick="modal()"><i class="fab fa-google"></i></a>
     </footer>
-    <!-- <section class="links">
-        <article>
-            <h2>Links</h2>
-            <ul>
-                <li><a href="https://renato7oliveira.github.io/landpage-generica/src/" target="_blank">Landpage #2 - CSS Grid + HTML</a></li>
-                <li><a href="https://renato7oliveira.github.io/svg-animate/src/" target="_blank">Landpage #1 - SVG Animate</a></li>
-                <li><a href="https://renato7oliveira.github.io/street-fighter-audio-project" target="_blank">Street Fighter Adobe Edge</a></li>
-                <li><a href="https://drive.google.com/file/d/1Xc1jfuPX1rzA3627AHtKe_HWVZaeaYr8/view?usp=sharing" target="_blank">Currículo em PDF</a></li>
-            </ul>
-        </article>
-        <article>
-            <h2>Contato</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/renatooliveiraweb" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a></li>
-                <li><a href="https://github.com/renato7oliveira" target="_blank"><i class="fab fa-github"></i> Github</a></li>
-                <li><a href="https://www.instagram.com/renatooliveiraweb" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li>
-                    <details>
-                      <summary><i class="fab fa-google"></i> E-mail
-                      </summary>
-                      <p>renato.ldeoliveira@gmail.com</p>
-                    </details>
-                </li>
-            </ul>
-        </article>
-    </section> -->
 </body>
 </html>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK1NY2DSEQ"></script>
@@ -76,4 +55,20 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-HK1NY2DSEQ');
+</script>
+
+<script>
+    function modal(){
+        const modal = document.querySelector('.modal');
+        modal.classList.toggle('modal-visible');
+    }
+    function copyEmail(){
+        const email = document.querySelector('span').innerHTML;
+        const emailCopy = document.querySelector('.modal-info-copy');
+        navigator.clipboard.writeText(email);
+        emailCopy.classList.add('modal-info-copy-show');
+        setTimeout(() => {
+            emailCopy.classList.remove('modal-info-copy-show');
+        }, "700")
+    }
 </script>
