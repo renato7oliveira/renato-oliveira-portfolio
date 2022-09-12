@@ -32,42 +32,18 @@
             </div>
         </article>
     </section>
-    <section class="links">
-        <article>
-            <h2>Links</h2>
-            <ul>
-                <li><a href="https://renato7oliveira.github.io/landpage-generica/src/" target="_blank">Landpage #2 - CSS Grid + HTML</a></li>
-                <li><a href="https://renato7oliveira.github.io/svg-animate/src/" target="_blank">Landpage #1 - SVG Animate</a></li>
-                <li><a href="https://renato7oliveira.github.io/street-fighter-audio-project" target="_blank">Street Fighter Adobe Edge</a></li>
-                <li><a href="https://drive.google.com/file/d/1Xc1jfuPX1rzA3627AHtKe_HWVZaeaYr8/view?usp=sharing" target="_blank">Currículo em PDF</a></li>
-            </ul>
-        </article>
-        <article>
-            <h2>Contato</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/renatooliveiraweb" target="_blank"><i class="fab fa-linkedin-in"></i> Linkedin</a></li>
-                <li><a href="https://github.com/renato7oliveira" target="_blank"><i class="fab fa-github"></i> Github</a></li>
-                <li><a href="https://www.instagram.com/renatooliveiraweb" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li>
-                    <details>
-                      <summary><i class="fab fa-google"></i> E-mail
-                      </summary>
-                      <p>renato.ldeoliveira@gmail.com</p>
-                    </details>
-                </li>
-            </ul>
-        </article>
-    </section>
     <section class="modal">
-        <p class="modal-info-copy">E-mail copiado!</p>
-        <p><span class="email-content">renato.ldeoliveira@gmail.com</span> <i class="fa-regular fa-copy" title="Copiar e-mail" onclick="copyEmail()"></i></p>
+        <p  class="modal-info-copy">E-mail copiado!</p>
+        <p><span class="email-content">renato.ldeoliveira@gmail.com</span> 
+            <i class="fa-regular fa-copy" title="Copiar e-mail" onclick="copyEmail()"></i>
+        </p>
         <p onclick="modal()">(X) Fechar </p>
     </section>
     <footer>
         <a href="https://www.linkedin.com/in/renatooliveiraweb" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://github.com/renato7oliveira" target="_blank" title="Github"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/renatooliveiraweb" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a title="E-mail" onclick="modal()"><i class="fab fa-google"></i></a>
+        <a title="E-mail" onclick="modal()"><i class="fa-regular fa-envelope"></i></a>
     </footer>
 </body>
 </html>
@@ -85,7 +61,7 @@
         modal.classList.toggle('modal-visible');
     }
     function copyEmail(){
-        const email = document.querySelector('span').innerHTML;
+        const email = document.querySelector('.email-content').innerHTML;
         const emailCopy = document.querySelector('.modal-info-copy');
         navigator.clipboard.writeText(email);
         emailCopy.classList.add('modal-info-copy-show');
