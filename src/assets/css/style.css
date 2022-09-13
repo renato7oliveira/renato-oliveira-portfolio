@@ -24,16 +24,21 @@ body {
 p,
 li {
   font-size: 1.2rem;
+  margin-bottom: 25px;
 }
 
-.about {
+a {
+  color: var(--color-primary);
+}
+
+.about, .links {
   align-items: center;
   background-color: var(--color-white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100vh;
 }
-.about article {
+.about article, .links article {
   align-content: center;
   display: grid;
   height: 100vh;
@@ -61,40 +66,40 @@ figure::after {
   box-shadow: 0 0 10px 15px rgba(204, 204, 204, 0.4);
 }
 
-.description {
+.cloud-animate {
   color: var(--color-white);
   background: linear-gradient(40deg, #071a56 60%, #77027e 100%);
   overflow: hidden;
   position: relative;
 }
-.description div {
+.cloud-animate div {
   z-index: 1;
 }
-.description h1 {
+.cloud-animate h1 {
   font-size: 2.7rem;
   font-weight: 900;
   letter-spacing: -1px;
 }
-.description p {
+.cloud-animate p {
   font-weight: 300;
   font-size: 1.1rem;
   line-height: 35px;
   margin-top: 15px;
 }
-.description a {
+.cloud-animate a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.9rem;
   text-decoration: underline;
 }
-.description a:hover {
+.cloud-animate a:hover {
   color: #fff;
 }
-.description i {
+.cloud-animate i {
   font-size: 1.5rem;
   margin-right: 10px;
 }
 
-.description::after {
+.cloud-animate::after {
   animation: animate-cloud 50s ease-in-out infinite alternate;
   background-image: url("../images/cloud-bg.png");
   background-repeat: no-repeat;
@@ -109,12 +114,25 @@ figure::after {
     transform: translateX(-696px);
   }
 }
+.links article:nth-child(1) {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.links article:nth-child(1) h2 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.links article:nth-child(1) i {
+  font-size: 4rem;
+}
+
 @media (max-width: 900px) {
-  .about {
+  .about, .links {
     grid-template-columns: 1fr;
     height: auto;
   }
-  .about article {
+  .about article, .links article {
     padding: 0 25px;
   }
 
@@ -224,13 +242,12 @@ footer a:active {
     z-index: 1;
   }
   footer a {
-    color: var(--color-white);
+    color: var(--color-white) !important;
     cursor: pointer;
     font-size: 1.7rem;
     opacity: 1;
   }
   footer a:hover {
-    color: var(--color-white);
     transform: scale(1);
   }
 }
