@@ -66,40 +66,40 @@ figure::after {
   box-shadow: 0 0 10px 15px rgba(204, 204, 204, 0.4);
 }
 
-.cloud-animate {
+.cloud-animate, .modal {
   color: var(--color-white);
   background: linear-gradient(40deg, #071a56 60%, #77027e 100%);
   overflow: hidden;
   position: relative;
 }
-.cloud-animate div {
+.cloud-animate div, .modal div {
   z-index: 1;
 }
-.cloud-animate h1 {
+.cloud-animate h1, .modal h1 {
   font-size: 2.7rem;
   font-weight: 900;
   letter-spacing: -1px;
 }
-.cloud-animate p {
+.cloud-animate p, .modal p {
   font-weight: 300;
   font-size: 1.1rem;
   line-height: 35px;
   margin-top: 15px;
 }
-.cloud-animate a {
+.cloud-animate a, .modal a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.9rem;
   text-decoration: underline;
 }
-.cloud-animate a:hover {
+.cloud-animate a:hover, .modal a:hover {
   color: #fff;
 }
-.cloud-animate i {
+.cloud-animate i, .modal i {
   font-size: 1.5rem;
   margin-right: 10px;
 }
 
-.cloud-animate::after {
+.cloud-animate::after, .modal::after {
   animation: animate-cloud 50s ease-in-out infinite alternate;
   background-image: url("../images/cloud-bg.png");
   background-repeat: no-repeat;
@@ -156,7 +156,7 @@ figure::after {
 }
 .modal p {
   color: var(--color-white);
-  margin: 15px 0;
+  margin: 5px 0;
   text-transform: uppercase;
 }
 .modal i {
