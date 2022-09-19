@@ -60,10 +60,9 @@ figure::after {
   height: 10px;
   display: block;
   margin: 25px auto;
-  background-color: var(--color-white);
-  background-color: rgba(204, 204, 204, 0.4);
+  background-color: rgba(204, 204, 204, 0.6);
   border-radius: 100%;
-  box-shadow: 0 0 10px 15px rgba(204, 204, 204, 0.4);
+  box-shadow: 0 0 10px 15px rgba(204, 204, 204, 0.6);
 }
 
 .cloud-animate, .modal {
@@ -76,7 +75,7 @@ figure::after {
   z-index: 1;
 }
 .cloud-animate h1, .modal h1 {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: 900;
   letter-spacing: -1px;
 }
@@ -87,12 +86,15 @@ figure::after {
   margin-top: 15px;
 }
 .cloud-animate a, .modal a {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.9rem;
-  text-decoration: underline;
+  padding: 10px 15px;
+  text-decoration: none;
 }
 .cloud-animate a:hover, .modal a:hover {
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .cloud-animate i, .modal i {
   font-size: 1.5rem;
@@ -100,7 +102,7 @@ figure::after {
 }
 
 .cloud-animate::after, .modal::after {
-  animation: animate-cloud 50s ease-in-out infinite alternate;
+  animation: animate-cloud 30s ease-in-out infinite alternate;
   background-image: url("../images/cloud-bg.png");
   background-repeat: no-repeat;
   content: "";
@@ -114,19 +116,6 @@ figure::after {
     transform: translateX(-696px);
   }
 }
-.links article:nth-child(1) {
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-.links article:nth-child(1) h2 {
-  font-size: 4rem;
-  font-weight: 900;
-}
-.links article:nth-child(1) i {
-  font-size: 4rem;
-}
-
 @media (max-width: 900px) {
   .about, .links {
     grid-template-columns: 1fr;
