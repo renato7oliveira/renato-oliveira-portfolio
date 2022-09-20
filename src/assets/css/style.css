@@ -116,19 +116,6 @@ figure::after {
     transform: translateX(-696px);
   }
 }
-.links article:nth-child(1) {
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-.links article:nth-child(1) h2 {
-  font-size: 4rem;
-  font-weight: 900;
-}
-.links article:nth-child(1) i {
-  font-size: 4rem;
-}
-
 @media (max-width: 900px) {
   .about, .links {
     grid-template-columns: 1fr;
