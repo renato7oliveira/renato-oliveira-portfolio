@@ -1,0 +1,64 @@
+.modal {
+  display: grid;
+  align-content: center;
+  background-color: var(--color-a);
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.modal p {
+  color: var(--color-white);
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+.modal i {
+  color: rgba(255, 255, 255, 0.5) !important;
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+.modal i:hover {
+  color: #fff !important;
+}
+
+.modal-info-copy {
+  font-size: 0.9rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+.modal p:nth-child(3) {
+  color: rgba(255, 255, 255, 0.5) !important;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.modal p:nth-child(3):hover {
+  color: #fff !important;
+}
+
+.modal-info-copy-show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.modal-visible {
+  display: grid;
+}
+
+@media (max-width: 900px) {
+  .modal p {
+    font-size: 0.8rem;
+    margin: 5px 0;
+  }
+}
+
+/*# sourceMappingURL=modal.css.map */

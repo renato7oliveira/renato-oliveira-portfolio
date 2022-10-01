@@ -6,7 +6,6 @@
 
 ## Objetivo
 
-- `Dispor links experimentais`
 - `Dispor link para currículo`
 
 ## Tecnologias
