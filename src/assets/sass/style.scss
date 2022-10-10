@@ -15,9 +15,9 @@
 }
 :root {
     // COLORS
-    --color-a: #1e001e;
-    --color-b: #320032;
-    --color-c: #660066;
+    --color-a: #140330;
+    --color-b: #520DC2;
+    --color-c: #6F42C1;
     --color-white: #f9f9f9;
 }
 html,
@@ -29,10 +29,16 @@ a{
     color: orangered;
 }
 h2{
+    color: var(--color-b);
     font-weight: bolder;
 }
 p, li{
     font-size: 1.2rem;
+}
+@media(max-width: 900px){
+    p, li{
+        font-size: 1rem;
+    }
 }
 .about{
     display: grid;
@@ -43,7 +49,7 @@ p, li{
     "about-article";
     height: 100vh;
     article{
-        background-color: var(--color-a);
+        background-color: var(--color-white);
         grid-area: about-article;
         text-align: center;
         img{
@@ -57,30 +63,36 @@ p, li{
             }
         }
         p{
-            color: rgba($color: #fff, $alpha: 0.9);
+            color: var(--color-a);
             // font-size: 1.1rem;
             margin-top: 10px;
         }
         a{
-            background-color: rgba($color: #fff, $alpha: 0.9);
+            background-color: var(--color-b);
             // border: 1px solid rgba($color: #fff, $alpha: 0.2);
             border-radius: 5px;
-            color: var(--color-a);
+            color: var(--color-white);
             font-size: 0.8rem;
             padding: 10px 15px;
             text-decoration: none;
             &:hover{
-                background-color: rgba($color: #fff, $alpha: 0.7);
+                background-color: var(--color-c);
+                animation-name: button_pulse;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+            }
+            &:active{
+                background-color: var(--color-a);
             }
         }
         h1{
-            color: #fff;
+            color: var(--color-b);
             font-size: 1.3rem;
             font-weight: 900;
             letter-spacing: 1px;
         }
         h2{
-            color: #fbbd01;
+            color: var(--color-b);
             font-size: 1.1rem;
             font-weight: normal;
             text-transform: uppercase;
@@ -89,7 +101,7 @@ p, li{
 }
 .about::before{
     content: '';
-    background-color: var(--color-b);
+    background-color: var(--color-c);
 }
 @media(max-width: 900px){
     .about{
@@ -102,6 +114,15 @@ p, li{
         }
     }
 }
+  
+  @keyframes button_pulse {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+  }
 .skills{
     display: flex;
     gap: 100px;
@@ -141,7 +162,7 @@ p, li{
         height: auto;
         position: relative;
         h2{
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             transform: rotate(0deg);
             padding: 50px 0;
             writing-mode: horizontal-tb;
