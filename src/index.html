@@ -18,56 +18,55 @@
 <title>Renato Oliveira · front-end · web-design</title>
 </head>
 <body>
-    <section class="about">
-        <article>
-            <figure>
-                <img src="assets/images/renato-oliveira-web-about.jpg" alt="Renato Oliveira · front-end · web-design" title="Renato Oliveira · front-end · web-design">
-            </figure>
-            <h1>RENATO OLIVEIRA</h1>
-            <h2>Dev. Front-end</h2>
-            <p>Materializa ideias com HTML, CSS e Javascript desde 2009.</p>
-            <p>Onipresente em Comunicação, Marketing e TI. </p>
-            <p>Pai da Ana Luiza e da “Cyndi”.</p>
-            <p><a href="https://drive.google.com/file/d/1Xc1jfuPX1rzA3627AHtKe_HWVZaeaYr8/view?usp=sharing" target="_blank">Currículo em PDF <i class="fa-solid fa-layer-group"></i></a></p>
-        </article>
-    </section>
-     <section class="skills">
-        <h2>Habilidades</h2>
-        <article>
-            <h3>CODE</h3>
-            <ul>
-                <li>React.js</li>
-                <li>TS + JS</li>
-                <li>HTML5</li>
-                <li>CSS3 + Sass + BEM</li>
-                <li>Bootstrap</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Design</h3>
-            <ul>
-                <li>Adobe XD</li>
-                <li>Adobe Photoshop</li>
-                <li>Adobe Premiere*</li>
-            </ul>
-        </article>
-    </section>
-    <section class="modal">
-        <div>
-            <p class="modal-info-copy">E-mail copiado!</p>
-            <p><span class="email-content">renato.ldeoliveira@gmail.com</span> 
-            <i class="fa-regular fa-copy" title="Copiar e-mail" onclick="copyEmail()"></i></p>
-            <p onclick="modal()">(X) Fechar </p>
-        </div>
-    </section>
-    <footer>
-        <a href="https://www.linkedin.com/in/renatooliveiraweb" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/renato7oliveira" target="_blank" title="Github"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/renatooliveiraweb" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a title="E-mail" onclick="modal()"><i class="fa-regular fa-envelope"></i></a>
-    </footer> 
-
-
+  <section class="about">
+    <article>
+      <figure>
+        <img src="assets/images/renato-oliveira-web-about.jpg" alt="Renato Oliveira · front-end · web-design" title="Renato Oliveira · front-end · web-design">
+      </figure>
+      <h1>RENATO OLIVEIRA</h1>
+      <h2>Dev. Front-end</h2>
+      <p>Materializa ideias com HTML, CSS e JS desde 2009.</p>
+      <p>Onipresente em Comunicação, Marketing e TI. </p>
+      <p>Pai da Ana Luiza e da “Cyndi”.</p>
+      <p><a href="https://drive.google.com/file/d/1Xc1jfuPX1rzA3627AHtKe_HWVZaeaYr8/view?usp=sharing" target="_blank">Currículo em PDF</a></p>
+    </article>
+  </section>
+  <section class="skills">
+    <h2>Habilidades</h2>
+    <article>
+      <h3>CODE</h3>
+        <ul>
+          <li>React.js</li>
+          <li>TS + JS</li>
+          <li>HTML5</li>
+          <li>CSS3 + Sass + BEM</li>
+          <li>Bootstrap</li>
+          <li>Wordpress</li>
+        </ul>
+    </article>
+    <article>
+      <h3>Design</h3>
+        <ul>
+          <li>Adobe XD</li>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Premiere*</li>
+        </ul>
+    </article>
+  </section>
+  <section class="modal">
+    <div>
+      <p class="modal-info-copy">E-mail copiado!</p>
+      <p><span class="email-content">renato.ldeoliveira@gmail.com</span> 
+      <i class="fa-regular fa-copy" title="Copiar e-mail" onclick="copyEmail()"></i></p>
+      <p onclick="modal()">(X) Fechar </p>
+    </div>
+  </section>
+  <footer>
+    <a href="https://www.linkedin.com/in/renatooliveiraweb" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/renato7oliveira" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/renatooliveiraweb" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a title="E-mail" onclick="modal()"><i class="fa-regular fa-envelope"></i></a>
+  </footer> 
 </body>
 </html>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK1NY2DSEQ"></script>
@@ -79,17 +78,17 @@
 </script>
 
 <script>
-    function modal(){
-        const modal = document.querySelector('.modal');
-        modal.classList.toggle('modal-visible');
-    }
-    function copyEmail(){
-        const email = document.querySelector('.email-content').innerHTML;
-        const emailCopy = document.querySelector('.modal-info-copy');
-        navigator.clipboard.writeText(email);
-        emailCopy.classList.add('modal-info-copy-show');
-        setTimeout(() => {
-            emailCopy.classList.remove('modal-info-copy-show');
-        }, "700")
-    }
+  function modal(){
+    const modal = document.querySelector('.modal');
+    modal.classList.toggle('modal-visible');
+  }
+  function copyEmail(){
+    const email = document.querySelector('.email-content').innerHTML;
+    const emailCopy = document.querySelector('.modal-info-copy');
+    navigator.clipboard.writeText(email);
+    emailCopy.classList.add('modal-info-copy-show');
+    setTimeout(() => {
+        emailCopy.classList.remove('modal-info-copy-show');
+    }, "700")
+  }
 </script>

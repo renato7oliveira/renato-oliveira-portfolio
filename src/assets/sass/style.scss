@@ -28,9 +28,8 @@ body {
 a{
     color: orangered;
 }
-h2{
+h1, h2{
     color: var(--color-b);
-    font-weight: bolder;
 }
 p, li{
     font-size: 1.2rem;
@@ -65,7 +64,7 @@ p, li{
         p{
             color: var(--color-a);
             // font-size: 1.1rem;
-            margin-top: 10px;
+            margin: 15px 0;
         }
         a{
             background-color: var(--color-b);
@@ -86,15 +85,13 @@ p, li{
             }
         }
         h1{
-            color: var(--color-b);
             font-size: 1.3rem;
             font-weight: 900;
-            letter-spacing: 1px;
         }
         h2{
-            color: var(--color-b);
+            color: var(--color-a);
             font-size: 1.1rem;
-            font-weight: normal;
+            // font-weight: normal;
             text-transform: uppercase;
         }
     }
@@ -149,8 +146,7 @@ p, li{
             text-transform: uppercase;
         }
         li{
-            color: #666;
-            
+            color: var(--color-a);
             margin-top: 10px;
         }
     }
@@ -162,7 +158,7 @@ p, li{
         height: auto;
         position: relative;
         h2{
-            font-size: 1.6rem;
+            font-size: 2.6rem;
             transform: rotate(0deg);
             padding: 50px 0;
             writing-mode: horizontal-tb;
